@@ -1,0 +1,54 @@
+<header class="navbar fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "勤怠システム", "#", id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <% if current_user.admin? %>
+            <!-- 管理者の場合のリンク -->
+            <li><%= link_to "トップへ", root_path, class: "nav-list" %></li>
+            <li><%= link_to "ユーザ一覧", users_path, class: "nav-list" %></li>
+            <li><%= link_to "出勤社員一覧", attendance_list_user_path(current_user), class: "nav-list" %></li>
+            <li><%= link_to "拠点情報の修正", base_points_path, class: "nav-list" %></li>
+            <li><%= link_to "基本情報の修正", edit_user_path(current_user), class: "nav-list" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.name %> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "設定", edit_user_path(current_user) %></li>
+                <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% else %>
+            <!-- 一般ユーザーの場合のリンク -->
+            <li><%= link_to "トップへ", root_path, class: "nav-list" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.name %> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "勤怠", user_path(current_user) %></li>
+                <li><%= link_to "設定", edit_user_path(current_user) %></li>
+                <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% end %>
+        <% else %>
+          <!-- ログインしていない場合のリンク -->
+          <li><%= link_to "トップへ", root_path, class: "nav-list" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              アカウント <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "ログイン", login_path %></li>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!--ok-->

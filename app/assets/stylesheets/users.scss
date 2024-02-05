@@ -1,0 +1,76 @@
+
+// ユーザ一
+
+.user-title {
+  font-size: 40px;
+  font-style: nomal;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+// ユーザー編集ページ
+
+.user-label-list {
+  margin-top: 10px;
+}
+
+// ユーザ一覧ページ
+
+.btn-custum-csv {
+  margin-top: 16px;
+  width: 290px;
+}
+
+.btn-custum-index {
+  height: 50px;
+  width: 100px;
+}
+
+// ユーザー勤怠ページ
+
+.custom-table {
+  vertical-align: bottom; 
+}
+
+.btn-custum-tfoot {
+  margin-top: 10px;
+}
+
+.custom-red-text {
+  color: red;
+}
+
+a.sp-link, a.sp-link:hover {
+  color: red;
+}
+
+.notification-badge {
+  color: red;
+  font-weight: bold; 
+  border: 3px solid red; /* 赤色のボーダー */ 
+  border-radius: 0px; /* ボックスを角丸にする（オプション） */
+  display: inline-block; /* インライン要素として表示 */
+  margin-top: -3px;
+  margin-bottom: 3px;
+}
+
+// 社員一覧ページ
+
+.employee-number {
+  width: 600px;
+}
+.attrendane_list-table {
+  margin-top: 30px;
+}
+
+/* ユーザー勤怠情報テーブル */
+
+#table-attendances {
+  td {
+    vertical-align: bottom;
+    text-align: center;
+  }
+}
+
+// ok

@@ -1,0 +1,42 @@
+/* 勤怠編集ページ */
+
+#time-select {
+  display: inline;
+  width: 40%;
+}
+
+/* 基本情報編集モーダルウインドウ */
+
+#custom-modal-header {
+  border: none;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.modal-body {
+  margin-top: -10px;
+}
+
+.close-button {
+  font-size: 32px;
+  margin-top: 10px;
+  margin-right: 18px;
+}
+
+.modal-form {
+  display: inline;
+  width: 72px;
+}
+
+.modal-btn {
+  margin-bottom: 16px;
+}
+
+// 一ヶ月分の勤怠申請
+.montly-req-btn {
+  margin-top: 10px;
+}
